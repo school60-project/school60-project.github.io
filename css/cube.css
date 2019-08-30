@@ -1,0 +1,82 @@
+.cube {
+  display: flex;
+  background: #EAF1FE;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.artboard {
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  width: 100vmin;
+  height: 100vmin;
+}
+
+.left {
+  transform-origin: 0 0;
+  transform: rotate(90deg) skewX(-30deg) scaleY(0.8660254038);
+}
+
+.right {
+  transform-origin: 0 0;
+  transform: rotate(-30deg) skewX(-30deg) scaleY(0.8660254038);
+}
+
+.top {
+  transform-origin: bottom left;
+  transform: rotate(150deg) skewX(30deg) scaleY(0.8660254038);
+}
+
+.stack {
+  position: absolute;
+  left: 50vmin;
+  transform-origin: 0 -15vmin;
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.stack#stack-1 {
+  top: 53vmin;
+  transition-delay: .5s;
+}
+.stack#stack-2 {
+  top: 49vmin;
+  transition-delay: .65s;
+}
+.stack#stack-3 {
+  top: 45vmin;
+  transition-delay: .8s;
+}
+.stack#stack-4 {
+  top: 40vmin;
+  transition-delay: .95s;
+}
+.stack.start {
+  transform: translateY(20vmin) scale(0);
+  opacity: 0;
+}
+
+.stack * {
+  position: absolute;
+}
+
+.stack .left {
+  background: linear-gradient(to top, #EAF1FE, #CFE1FD);
+  width: 5vmin;
+  height: 20vmin;
+}
+
+.stack .right {
+  background: linear-gradient(to left, #BDD5FA, #9FBEF3);
+  width: 20vmin;
+  height: 5vmin;
+}
+
+.stack .top {
+  background: #BDD5FA;
+  width: 20vmin;
+  height: 20vmin;
+  top: -40vmin;
+}
