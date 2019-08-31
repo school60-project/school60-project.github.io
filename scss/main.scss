@@ -91,6 +91,49 @@ a {
   background: $body-bg;
 }
 
+.page .dots {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 10;
+  padding: 0 0 0 5%;
+  filter: blur(10px) contrast(20px);
+  transform: translate( 0, -50%);
+  transition: 0.3s;
+}
+
+.dots.active .circle {
+  width: calc(1px + 0.5vw);
+  margin-top: -0.5vw;
+  margin-bottom: -0.5vw;
+}
+
+.dots.active .circle-a{
+  width: calc(1px + 0.5vw);
+  height: calc(15px + 0.5vw);
+  border-radius: 1.5px;
+  transition: 0.3s;
+}
+
+.dots .circle {
+  background: #000;
+  width: $circle;
+  height: $circle;
+  border-radius: 50%;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  transition: 0.3s;
+}
+
+.dots .circle-a {
+  background: #000;
+  width: $circle;
+  height: $circle;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
 .page .header {
   display: flex;
   width: 100%;
@@ -99,70 +142,55 @@ a {
   padding: 10 5% 0 5%;
 }
 
-.page .logo, .account {
-  font-size: $icon-fz;
+.page .minor {
+  position: relative;
+  width: calc(30px + 0.5vw);
+  height: calc(30px + 0.5vw);
 }
 
-
-
-$circle: calc(2px + 0.5vw);
-
-.page .dots {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 50%;
-  left: 10;
-  padding: 0 0 0 5%;
-  transform: translate( 0, -50%);
-}
-
-.page .circle {
-  background: #000;
-  width: $circle;
-  height: $circle;
-  border-radius: 50%;
-  margin-bottom: 1vw;
-}
-
-.page .circle-a {
-  background: #000;
-  width: $circle;
-  height: $circle;
-  border-radius: 50%;
-  margin-bottom: 1vw;
-}
-
-.page .footer {
-  display: flex;
-  position: absolute;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 5% 10 5%;
-  bottom: 0;
+.page .account {
+  position: fixed;
+  font-size: $icon-da;
+  top: calc(35px + 1.5vw);
+  right: calc(35px + 1.5vw);
 }
 
 .page .search {
-  position: relative;
+  position: fixed;
+  font-size: $icon-da;
+  top: calc(35px + 1.5vw);
+  right: calc(35px + 1.5vw);
 }
 
-.search i {
+.page .account.active {
+  position: fixed;
   font-size: $icon-fz;
+  float: right;
+  top: 10;
+  right: calc(15px + 1.5vw);
+}
+
+.page .search.active {
+  position: fixed;
+  font-size: $icon-fz;
+  float: right;
+  top: 10;
+  right: calc(15px + 1.5vw);
+}
+
+
+.search i {
   transform: scaleX(-1);
   transform-origin: center;
   transform-box: fill-box;
 }
 
-.search span {
-  position: absolute;
-  top: 100%;
-  left: -20%;
-  margin-right: 80%;
-  transform: translate( -20%, -100%);
-  font-size: calc(11px + 1.5vw);
+
+.page .logo {
+  text-transform: uppercase;
 }
 
-.page .title {
-
+.logo #school-logo {
+  font-family: 'Roboto';
+  font-weight: 900;
 }
