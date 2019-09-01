@@ -83,7 +83,6 @@ a {
 
 
 .page {
-
   position: absolute;
   overflow: hidden;
   width: 100%;
@@ -101,6 +100,7 @@ a {
   height: 40px;
   left: 0;
   top: 50%;
+  z-index: 10;
   transform: translate( 0, -50%);
   transition: 0.3s;
 }
@@ -178,4 +178,52 @@ a {
 .logo #school-logo {
   font-family: 'Roboto';
   font-weight: 900;
+}
+
+
+#menu {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 120%;
+  transition: 0.3s;
+  z-index: 9;
+}
+
+#menu.active {
+  top: 0;
+  transition: 0.3s;
+}
+
+#menu .case {
+  font-size: 24;
+}
+
+#menu .case li {
+  margin-top: 5;
+  margin-bottom: 5;
+}
+
+.test {
+  top: 30%;
+  left: 30%;
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+}
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(0px);
+}
+
+.blur.active {
+  filter: blur(10px);
 }
