@@ -94,52 +94,37 @@ a {
 .page .dots {
   position: absolute;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  left: 0;
   top: 50%;
-  left: 10;
-  padding: 0 0 0 5%;
-  filter: blur(10px) contrast(20px);
   transform: translate( 0, -50%);
   transition: 0.3s;
 }
 
-.dots.active .circle {
-  width: calc(1px + 0.5vw);
-  margin-top: -0.5vw;
-  margin-bottom: -0.5vw;
+.dots .case {
+  font-size: $icon-fz;
 }
 
-.dots.active .circle-a{
-  width: calc(1px + 0.5vw);
-  height: calc(15px + 0.5vw);
-  border-radius: 1.5px;
+.dots i {
   transition: 0.3s;
 }
 
-.dots .circle {
-  background: #000;
-  width: $circle;
-  height: $circle;
-  border-radius: 50%;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
+.dots.active i {
+  transform: rotate(270deg);
   transition: 0.3s;
 }
 
-.dots .circle-a {
-  background: #000;
-  width: $circle;
-  height: $circle;
-  border-radius: 50%;
-  transition: 0.3s;
-}
 
 .page .header {
   display: flex;
   width: 100%;
   height: 50px;
   justify-content: space-between;
-  padding: 10 5% 0 5%;
+  padding: 10 3% 0 15;
 }
 
 .page .minor {
